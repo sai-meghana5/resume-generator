@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Resume Generator</h1>
+    <div class="form-group">
+  <textarea id="jobDescription" placeholder="Paste Job Description Here"></textarea>
+</div>
+
+
+    <form id="resumeForm">
+      <div class="form-group"><input type="text" id="fullName" placeholder="Full Name" required /></div>
+      <div class="form-group"><input type="text" id="email" placeholder="Email" required /></div>
+      <div class="form-group"><input type="text" id="phone" placeholder="Phone Number" required /></div>
+      <div class="form-group"><input type="text" id="location" placeholder="Location" required /></div>
+      <div class="form-group"><input type="date" id="dob" placeholder="Date of Birth" required /></div>
+      <div class="form-group"><input type="text" id="experience" placeholder="Experience" required /></div>
+      <div class="form-group"><textarea id="summary" placeholder="Professional Summary" required></textarea></div>
+      <div class="form-group"><input type="text" id="skills" placeholder="Skills (comma separated)" required /></div>
+      <div class="form-group"><textarea id="achievements" placeholder="Achievements (comma separated)" required></textarea></div>
+      <div class="form-group"><input type="url" id="linkedin" placeholder="LinkedIn Profile URL" /></div>
+      <div class="form-group"><input type="url" id="github" placeholder="GitHub Profile URL" /></div>
+      <div class="form-group"><input type="url" id="portfolio" placeholder="Portfolio URL (optional)" /></div>
+
+      <button type="submit" class="btn">Generate Resume</button>
+    </form>
+
+    <div id="resumeOutput" class="hidden">
+      <h2>Generated Resume</h2>
+      <div id="outputContent"></div>
+      <button onclick="downloadPDF()" class="btn">Download as PDF</button>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+  <script src="script.js"></script>
+  <!-- Paste JD for tailoring -->
+
+
+<!-- Your resume content should go here -->
+<div id="resume-content">
+  <!-- Resume sections: summary, skills, education, etc. -->
+</div>
+
+<!-- PDF Download Button -->
+<button onclick="downloadPDF()">Download as PDF</button>
+
+<!-- Add before closing </body> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
